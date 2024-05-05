@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.quotes {
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.cardContainer{
+  border:solid black;
+  margin: 2em;
+  height: 62vh;
+  
+  /* width: 40%; */
+  /* margin-left: 28%; */
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn {
+  border:solid blue;
+  width:25%;
+  border-radius:12px;
+}
+.btn:hover{
+  border:solid blue;
+  width:25%;
+  border-radius:12px;
+  background-color:black;
+  color:white;
+}
+.aPic {
+  width: 100%;
+  height: 100%;
+}

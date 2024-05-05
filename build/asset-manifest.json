@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/inspirational-app/static/css/main.2901fc6d.css",
+    "main.js": "/inspirational-app/static/js/main.c48f95e2.js",
+    "static/js/453.fbab1a34.chunk.js": "/inspirational-app/static/js/453.fbab1a34.chunk.js",
+    "index.html": "/inspirational-app/index.html",
+    "main.2901fc6d.css.map": "/inspirational-app/static/css/main.2901fc6d.css.map",
+    "main.c48f95e2.js.map": "/inspirational-app/static/js/main.c48f95e2.js.map",
+    "453.fbab1a34.chunk.js.map": "/inspirational-app/static/js/453.fbab1a34.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2901fc6d.css",
+    "static/js/main.c48f95e2.js"
+  ]
+}

@@ -1,23 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { photos } from './models/photos';
+import { symbols } from './models/symbols';
+import { quotes } from './models/quotes';
+import Card from './components/Card';
+import Button from './components/Button';
+import Quote from './components/Quote';
 
 function App() {
+
+  let [counter, setCounter] = useState(0);
+  let [currentImage, setCurrentImage] = useState(photos[counter]);
+  let [currentQuote, setCurrentQuote] = useState(quotes[counter]);
+
+  const changeFace = () => {
+    setCounter((prevCount) => {
+      const newCount = prevCount +=1;
+      if (newCount >= photos.length) {
+        return 0;
+      }
+      return newCount
+    });
+    setCurrentImage(photos[counter]);
+    setCurrentQuote(quotes[counter]);
+  }
+
+  const reverseFace = () => {
+    setCounter((prevCount) => {
+      const newCount = prevCount -=1;
+      if (newCount < 0) {
+        return photos.length -=1;
+      }
+      return newCount;
+    });
+    setCurrentImage(photos[counter]);
+    setCurrentQuote(quotes[counter]);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Quote content={currentQuote}/>
+      <Card currentImage={currentImage}/>
+
+      <div className="btnContainer">
+        <Button action={reverseFace} icon={symbols.left} />
+        <Button action={changeFace} icon={symbols.right} />
+      </div>
     </div>
   );
 }
