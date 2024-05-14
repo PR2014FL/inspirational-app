@@ -9,8 +9,8 @@ import Quote from './components/Quote';
 
 function App() {
 
-  let [counter, setCounter] = useState(0);
-  let [currentImage, setCurrentImage] = useState(photos[counter]);
+  let [counter, setCounter] = useState(0);//counter starts at 0 when refreshed
+  let [currentImage, setCurrentImage] = useState(photos[counter]);//counter number chooses the index of json object
   let [currentQuote, setCurrentQuote] = useState(quotes[counter]);
 
   const changeFace = () => {
